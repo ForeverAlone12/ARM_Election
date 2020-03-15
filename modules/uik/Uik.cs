@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace election
+namespace election.modules.uik
 {
-    public partial class Auth : Form
+    public partial class Uik : Form
     {
-        public Auth()
+        public Uik()
         {
             InitializeComponent();
         }

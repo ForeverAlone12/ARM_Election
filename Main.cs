@@ -1,4 +1,7 @@
-﻿using System;
+﻿using election.modules.election;
+using election.modules.members;
+using election.modules.uik;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace election
 {
     public partial class Main : Form
@@ -16,5 +20,34 @@ namespace election
         {
             InitializeComponent();
         }
-    }
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(childForm);
+            splitContainer1.Panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Members members = new Members();
+            OpenChildForm(members, e);
+        }
+
+        private void buttonUIK_Click(object sender, EventArgs e)
+        {
+            Uik uik = new Uik();
+            OpenChildForm(uik, e);
+        }
+
+        private void buttonElection_Click(object sender, EventArgs e)
+        {
+            Election election = new Election();
+            OpenChildForm(election, e);
+        }
+    } 
 }
