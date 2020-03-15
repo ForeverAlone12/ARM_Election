@@ -35,8 +35,10 @@
             this.buttonMembers = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonObservers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -49,29 +51,31 @@
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
-            // splitContainer1.Panel2
+            // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(965, 517);
             this.splitContainer1.SplitterDistance = 229;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.buttonElection);
             this.groupBox2.Controls.Add(this.buttonUIK);
             this.groupBox2.Controls.Add(this.buttonMembers);
-            this.groupBox2.Location = new System.Drawing.Point(332, 202);
+            this.groupBox2.Location = new System.Drawing.Point(12, 258);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(214, 116);
+            this.groupBox2.Size = new System.Drawing.Size(214, 231);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Администрирование";
             // 
             // buttonElection
             // 
-            this.buttonElection.Location = new System.Drawing.Point(7, 78);
+            this.buttonElection.Location = new System.Drawing.Point(7, 49);
             this.buttonElection.Name = "buttonElection";
             this.buttonElection.Size = new System.Drawing.Size(201, 24);
             this.buttonElection.TabIndex = 2;
@@ -81,7 +85,7 @@
             // 
             // buttonUIK
             // 
-            this.buttonUIK.Location = new System.Drawing.Point(7, 48);
+            this.buttonUIK.Location = new System.Drawing.Point(7, 19);
             this.buttonUIK.Name = "buttonUIK";
             this.buttonUIK.Size = new System.Drawing.Size(201, 24);
             this.buttonUIK.TabIndex = 1;
@@ -91,7 +95,7 @@
             // 
             // buttonMembers
             // 
-            this.buttonMembers.Location = new System.Drawing.Point(6, 19);
+            this.buttonMembers.Location = new System.Drawing.Point(6, 79);
             this.buttonMembers.Name = "buttonMembers";
             this.buttonMembers.Size = new System.Drawing.Size(202, 23);
             this.buttonMembers.TabIndex = 0;
@@ -102,21 +106,40 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonObservers);
-            this.groupBox1.Location = new System.Drawing.Point(112, 100);
+            this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(214, 371);
+            this.groupBox1.Size = new System.Drawing.Size(214, 117);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Меню";
             // 
             // buttonObservers
             // 
-            this.buttonObservers.Location = new System.Drawing.Point(7, 19);
+            this.buttonObservers.Location = new System.Drawing.Point(9, 19);
             this.buttonObservers.Name = "buttonObservers";
             this.buttonObservers.Size = new System.Drawing.Size(201, 23);
             this.buttonObservers.TabIndex = 0;
             this.buttonObservers.Text = "Наблюдатели";
             this.buttonObservers.UseVisualStyleBackColor = true;
+            this.buttonObservers.Click += new System.EventHandler(this.buttonObservers_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(201, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Партии";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(7, 137);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(201, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Кандидаты";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -126,7 +149,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Main";
             this.Text = "АРМ секретаря УИК";
-            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -143,6 +166,8 @@
         private System.Windows.Forms.Button buttonUIK;
         private System.Windows.Forms.Button buttonElection;
         private System.Windows.Forms.Button buttonObservers;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

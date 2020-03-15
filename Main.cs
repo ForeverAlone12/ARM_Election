@@ -1,7 +1,7 @@
 ﻿using election.modules.election;
 using election.modules.members;
+using election.modules.observes;
 using election.modules.uik;
-using ExpanderApp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,6 +50,12 @@ namespace election
         {
             Election election = new Election();
             OpenChildForm(election, e);
+        }
+
+        private void buttonObservers_Click(object sender, EventArgs e)
+        {
+            Observers observers = new Observers();
+            OpenChildForm(observers, e);
         }
     } 
 }

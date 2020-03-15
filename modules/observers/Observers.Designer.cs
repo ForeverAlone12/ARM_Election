@@ -1,6 +1,6 @@
-﻿namespace election.modules.members
+﻿namespace election.modules.observes
 {
-    partial class Members
+    partial class Observers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddObserver = new System.Windows.Forms.Button();
             this.btnSaveAndExit = new System.Windows.Forms.Button();
-            this.btnAddMember = new System.Windows.Forms.Button();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Party = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.From = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddressAndPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecordTime = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,82 +49,92 @@
             this.Surname,
             this.Nam,
             this.Nname,
-            this.Party,
-            this.Position,
             this.Status,
-            this.Edit});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.From,
+            this.AddressAndPhone,
+            this.Time,
+            this.RecordTime});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(755, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(848, 150);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // btnAddObserver
+            // 
+            this.btnAddObserver.Location = new System.Drawing.Point(582, 168);
+            this.btnAddObserver.Name = "btnAddObserver";
+            this.btnAddObserver.Size = new System.Drawing.Size(153, 23);
+            this.btnAddObserver.TabIndex = 4;
+            this.btnAddObserver.Text = "Добавить наблюдателя";
+            this.btnAddObserver.UseVisualStyleBackColor = true;
+            this.btnAddObserver.Click += new System.EventHandler(this.btnAddObserver_Click);
             // 
             // btnSaveAndExit
             // 
-            this.btnSaveAndExit.Location = new System.Drawing.Point(630, 456);
+            this.btnSaveAndExit.Location = new System.Drawing.Point(741, 168);
             this.btnSaveAndExit.Name = "btnSaveAndExit";
             this.btnSaveAndExit.Size = new System.Drawing.Size(119, 23);
-            this.btnSaveAndExit.TabIndex = 1;
+            this.btnSaveAndExit.TabIndex = 3;
             this.btnSaveAndExit.Text = "Сохранить и Выйти";
             this.btnSaveAndExit.UseVisualStyleBackColor = true;
-            // 
-            // btnAddMember
-            // 
-            this.btnAddMember.Location = new System.Drawing.Point(501, 456);
-            this.btnAddMember.Name = "btnAddMember";
-            this.btnAddMember.Size = new System.Drawing.Size(123, 23);
-            this.btnAddMember.TabIndex = 2;
-            this.btnAddMember.Text = "Добавить члена УИК";
-            this.btnAddMember.UseVisualStyleBackColor = true;
-            this.btnAddMember.Click += new System.EventHandler(this.btnAddMember_Click);
             // 
             // Surname
             // 
             this.Surname.HeaderText = "Фамилия";
             this.Surname.Name = "Surname";
+            this.Surname.ReadOnly = true;
             // 
             // Nam
             // 
             this.Nam.HeaderText = "Имя";
             this.Nam.Name = "Nam";
+            this.Nam.ReadOnly = true;
             // 
             // Nname
             // 
             this.Nname.HeaderText = "Отчество";
             this.Nname.Name = "Nname";
-            // 
-            // Party
-            // 
-            this.Party.HeaderText = "Партия";
-            this.Party.Name = "Party";
-            // 
-            // Position
-            // 
-            this.Position.HeaderText = "Должность";
-            this.Position.Name = "Position";
+            this.Nname.ReadOnly = true;
             // 
             // Status
             // 
-            this.Status.HeaderText = "Статус";
+            this.Status.HeaderText = "Статус присутствующегоо лица";
             this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
-            // Edit
+            // From
             // 
-            this.Edit.HeaderText = "Редактировать";
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Редактироовать";
+            this.From.HeaderText = "Кого представляет**";
+            this.From.Name = "From";
+            this.From.ReadOnly = true;
             // 
-            // Members
+            // AddressAndPhone
+            // 
+            this.AddressAndPhone.HeaderText = "Контактный телефон и адрес места жительства";
+            this.AddressAndPhone.Name = "AddressAndPhone";
+            this.AddressAndPhone.ReadOnly = true;
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Указанное лицо присутствовало с __ч. ___ мин. по __ч. __.мин";
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
+            // 
+            // RecordTime
+            // 
+            this.RecordTime.HeaderText = "Запомнить время";
+            this.RecordTime.Name = "RecordTime";
+            // 
+            // Observers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 484);
-            this.Controls.Add(this.btnAddMember);
+            this.ClientSize = new System.Drawing.Size(867, 214);
+            this.Controls.Add(this.btnAddObserver);
             this.Controls.Add(this.btnSaveAndExit);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Members";
-            this.Text = "Члены УИК";
+            this.Name = "Observers";
+            this.Text = "Наблюдатели";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,14 +143,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAddObserver;
         private System.Windows.Forms.Button btnSaveAndExit;
-        private System.Windows.Forms.Button btnAddMember;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Party;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn From;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AddressAndPhone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewButtonColumn RecordTime;
     }
 }

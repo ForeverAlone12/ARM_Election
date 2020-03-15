@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="componnent\Expander.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="componnent\Expander.Designer.cs">
+      <DependentUpon>Expander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="componnent\ExpanderDesigner.cs" />
+    <Compile Include="componnent\ExpanderTablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="componnent\ExpanderTablePanel.Designer.cs">
+      <DependentUpon>ExpanderTablePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="db\IConnection.cs" />
     <Compile Include="modules\auth\Auth.cs">
       <SubType>Form</SubType>
@@ -77,6 +91,18 @@
     <Compile Include="modules\members\Members.Designer.cs">
       <DependentUpon>Members.cs</DependentUpon>
     </Compile>
+    <Compile Include="modules\observers\Observer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\observers\Observer.Designer.cs">
+      <DependentUpon>Observer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modules\observers\Observers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\observers\Observers.Designer.cs">
+      <DependentUpon>Observers.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\uik\Uik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="componnent\Expander.resx">
+      <DependentUpon>Expander.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modules\auth\Auth.resx">
       <DependentUpon>Auth.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +129,12 @@
     <EmbeddedResource Include="modules\members\Members.resx">
       <DependentUpon>Members.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="modules\observers\Observer.resx">
+      <DependentUpon>Observer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\observers\Observers.resx">
+      <DependentUpon>Observers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="modules\uik\Uik.resx">
       <DependentUpon>Uik.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +146,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -128,6 +164,11 @@
   <ItemGroup>
     <Folder Include="documents\" />
     <Folder Include="entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Bitmap1.bmp" />
+    <None Include="Resources\Expand.png" />
+    <None Include="Resources\Collapse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
