@@ -28,26 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonMembers = new System.Windows.Forms.Button();
-            this.buttonUIK = new System.Windows.Forms.Button();
             this.buttonElection = new System.Windows.Forms.Button();
+            this.buttonUIK = new System.Windows.Forms.Button();
+            this.buttonMembers = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonObservers = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // splitContainer1
             // 
@@ -56,45 +49,35 @@
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
-            // splitContainer1.Panel1
+            // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(965, 517);
             this.splitContainer1.SplitterDistance = 229;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.buttonObservers);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(214, 371);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Меню";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.buttonElection);
             this.groupBox2.Controls.Add(this.buttonUIK);
             this.groupBox2.Controls.Add(this.buttonMembers);
-            this.groupBox2.Location = new System.Drawing.Point(12, 389);
+            this.groupBox2.Location = new System.Drawing.Point(332, 202);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(214, 116);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Администрирование";
             // 
-            // buttonMembers
+            // buttonElection
             // 
-            this.buttonMembers.Location = new System.Drawing.Point(6, 19);
-            this.buttonMembers.Name = "buttonMembers";
-            this.buttonMembers.Size = new System.Drawing.Size(202, 23);
-            this.buttonMembers.TabIndex = 0;
-            this.buttonMembers.Text = "Члены комиссии";
-            this.buttonMembers.UseVisualStyleBackColor = true;
-            this.buttonMembers.Click += new System.EventHandler(this.button1_Click);
+            this.buttonElection.Location = new System.Drawing.Point(7, 78);
+            this.buttonElection.Name = "buttonElection";
+            this.buttonElection.Size = new System.Drawing.Size(201, 24);
+            this.buttonElection.TabIndex = 2;
+            this.buttonElection.Text = "Выборы";
+            this.buttonElection.UseVisualStyleBackColor = true;
+            this.buttonElection.Click += new System.EventHandler(this.buttonElection_Click);
             // 
             // buttonUIK
             // 
@@ -106,15 +89,25 @@
             this.buttonUIK.UseVisualStyleBackColor = true;
             this.buttonUIK.Click += new System.EventHandler(this.buttonUIK_Click);
             // 
-            // buttonElection
+            // buttonMembers
             // 
-            this.buttonElection.Location = new System.Drawing.Point(7, 78);
-            this.buttonElection.Name = "buttonElection";
-            this.buttonElection.Size = new System.Drawing.Size(201, 24);
-            this.buttonElection.TabIndex = 2;
-            this.buttonElection.Text = "Выборы";
-            this.buttonElection.UseVisualStyleBackColor = true;
-            this.buttonElection.Click += new System.EventHandler(this.buttonElection_Click);
+            this.buttonMembers.Location = new System.Drawing.Point(6, 19);
+            this.buttonMembers.Name = "buttonMembers";
+            this.buttonMembers.Size = new System.Drawing.Size(202, 23);
+            this.buttonMembers.TabIndex = 0;
+            this.buttonMembers.Text = "Члены комиссии";
+            this.buttonMembers.UseVisualStyleBackColor = true;
+            this.buttonMembers.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonObservers);
+            this.groupBox1.Location = new System.Drawing.Point(112, 100);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(214, 371);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Меню";
             // 
             // buttonObservers
             // 
@@ -133,18 +126,16 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "Main";
             this.Text = "АРМ секретаря УИК";
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
