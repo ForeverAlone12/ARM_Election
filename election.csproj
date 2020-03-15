@@ -103,6 +103,12 @@
     <Compile Include="modules\observers\Observers.Designer.cs">
       <DependentUpon>Observers.cs</DependentUpon>
     </Compile>
+    <Compile Include="modules\partys\Partys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modules\partys\Partys.Designer.cs">
+      <DependentUpon>Partys.cs</DependentUpon>
+    </Compile>
     <Compile Include="modules\uik\Uik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modules\observers\Observers.resx">
       <DependentUpon>Observers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modules\partys\Partys.resx">
+      <DependentUpon>Partys.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="modules\uik\Uik.resx">
       <DependentUpon>Uik.cs</DependentUpon>

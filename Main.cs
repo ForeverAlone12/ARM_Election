@@ -1,6 +1,7 @@
 ﻿using election.modules.election;
 using election.modules.members;
 using election.modules.observes;
+using election.modules.partys;
 using election.modules.uik;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,12 @@ namespace election
         {
             Observers observers = new Observers();
             OpenChildForm(observers, e);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Partys partys = new Partys();
+            OpenChildForm(partys, e);
         }
     } 
 }
